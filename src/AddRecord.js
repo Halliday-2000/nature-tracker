@@ -1,31 +1,7 @@
 import React from 'react'
 import { useRef } from 'react';
-import { CgAdd } from 'react-icons/cg'
+import { AiOutlinePlus } from 'react-icons/ai'
 
-/*function geoFindMe() {
-    console.log("geoFindMe" , lastInsertedID)
-    function success(position) {
-      const latitude  = position.coords.latitude;
-      const longitude = position.coords.longitude;
-
-      //mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-      console.log(`Latitude: ${latitude} °, Longitude: ${longitude} °`);
-      locateTask(lastInsertedID, {latitude: latitude, longitude: longitude, error: ""});
-    }
-  
-    function error() {
-      console.log('Unable to retrieve your location');
-    }
-  
-    if(!navigator.geolocation) {
-      console.log('Geolocation is not supported by your browser');
-    } else {
-      console.log('Locating…');
-      navigator.geolocation.getCurrentPosition(success, error);
-    }
-  
-  }
-*/
 const AddRecord = ({ newRecord, setNewRecord, handleSubmit }) => {
     const inputRef = useRef();
 
@@ -47,7 +23,7 @@ const AddRecord = ({ newRecord, setNewRecord, handleSubmit }) => {
                 aria-label='Add Record'
                 onClick={() => inputRef.current.focus()}
             >
-                <CgAdd />
+                <AiOutlinePlus size={36} />
             </button>
         </form>
     )

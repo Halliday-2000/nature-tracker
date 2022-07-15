@@ -1,15 +1,16 @@
 import React from 'react'
 import LineRecord from './LineRecord';
 
-const RecordList = ({ records, handleCheck, handleDelete }) => {
+const RecordList = ({ records, handleDelete, handleEdit, handlePhoto }) => {
     return (
         <ul>
             {records.map((record) => (
                 <LineRecord
                     key={record.id}
                     record={record}
-                    handleCheck={handleCheck}
                     handleDelete={handleDelete}
+                    handleEdit={handleEdit}
+                    handlePhoto={handlePhoto}
                 />
             ))}
         </ul>

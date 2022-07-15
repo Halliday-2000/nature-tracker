@@ -2,17 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Courier New', monospace;
 }
 
 html {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 body {
   min-height: 100vh;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,16 +24,17 @@ body {
   align-items: center;
   height: 100vh; 
   width: 100%; 
-  max-width: 500px;
-  border: 1px solid mediumblue;
+  max-width: 750px;
+  border: 20px Outset #43970c;
   margin: auto;
 }
 
 header {
+  font-family: 'Ubuntu', sans-serif;
   width: 100%;
-  padding: 0 0.25em;
-  background-color: mediumblue;
-  color: aliceblue;
+  padding: 0 10em;
+  background: linear-gradient(rgb(220, 253, 210), #43970c);
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,13 +48,14 @@ main {
   justify-content: flex-start;
   align-items: center;
   overflow-y: auto;
+  background: #dcffe3;
 }
 
 footer {
   width: 100%;
-  padding: 0.25em;
-  background-color: mediumblue;
-  color: aliceblue;
+  padding: 0.1em;
+  background: linear-gradient(rgb(220, 253, 210), #2fff5c);
+  color: rgb(0, 0, 0);
   display: grid;
   place-content: center;
 }
@@ -61,69 +63,20 @@ footer {
 ul {
   width: 100%;
   list-style: none;
-  padding: 0 0.25rem 0.25rem;
+  padding: 0 7.5rem 0.25rem;
 }
 
 ul li::before {
   content: "\200B";
 }
 
-.item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-  margin: 0.25rem 0;
-  background-color: #eee;
-}
-
-.item:first-child {
-  margin: 0;
-}
-
-.item input[type="checkbox"] {
-  text-align: center;
-  width: 2.5rem;
-  width: 48px;
-  min-width: 48px;
-  height: 2.5rem;
-  height: 48px;
-  min-height: 48px;
-  cursor: pointer;
-  margin-right: 0.5rem;
-}
-
-.item input[type="checkbox"]:focus + label {
-  text-decoration: underline;
-}
-
-.item > label {
-  font-size: 0.75rem;
-  flex-grow: 1;
-}
-
-.item svg {
-  width: 48px;
-  min-width: 48px;
-  height: 36px;
-  font-size: 1rem;
-  color: steelblue;
-  cursor: pointer;
-}
-
-.item svg:focus, 
-.item svg:hover {
-  color: red;
-  outline: none;
-}
-
 .addForm {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin: 0.5rem 0 0;
-  padding: 0 0.5rem 0.25rem;
-  border-bottom: 1px solid #eee;
+  margin: 0.75rem 0 0;
+  padding: 0 0.75rem 0.75rem;
+  border-bottom: 10px solid rgb(20, 165, 32);
 }
 
 .addForm label {
@@ -137,36 +90,36 @@ ul li::before {
   min-height: 48px;
   font-size: 1rem;
   padding: 0.25rem;
-  border-radius: 0.25rem;
+  border-radius: 5rem;
+  padding-left: 25px;
   margin-right: 0.25rem;
   outline: none;
 }
 
 button {
-  height: 48px;
-  min-width: 48px;
+  height: 55px;
+  min-width: 55px;
   border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: aliceblue;
-  color: mediumblue;
+  background-color: rgb(33, 63, 5);
+  color: rgb(233, 233, 233);
   cursor: pointer;
 }
 
 button:focus, 
 button:hover {
-  color: white;
-  background-color: limegreen;
-  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(235, 243, 235);
 }
 
 .searchForm {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin: 0.25rem 0 0;
-  padding: 0 0.5rem 0.25rem;
-  border-bottom: 1px solid #eee;
+  margin: 0.75rem 0 0;
+  padding: 0 0.75rem 0.75rem;
+  border-bottom: 10px solid rgb(20, 165, 32);
 }
 
 .searchForm label {
@@ -180,6 +133,11 @@ button:hover {
   min-height: 48px;
   font-size: 1rem;
   padding: 0.25rem;
-  border-radius: 0.25rem;
+  padding-left: 25px;
+  border-radius: 5rem;
   outline: none;
+}
+
+#photo-canvas {
+  display: none;
 }

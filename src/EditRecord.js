@@ -1,27 +1,35 @@
 import React from 'react'
-import { useRef } from 'react'
+import { useRef, useState} from 'react'
+import { CgAdd } from 'react-icons/cg'
 
-const EditRecord = ({ newRecord, setNewRecord, handleSubmit }) => {
+const EditRecord = ({ record, onEdit }) => {
     const inputRef = useRef();
+    const [recordValue, setRecordValue] = useState(record);
 
     return (
-        <form className='addForm' onSubmit={handleSubmit}>
-            <label htmlFor='addRecord'>Create New Nature Event</label>
+        <form 
+            className='addForm' 
+            onSubmit={(e) => {
+                e.preventDefault();
+                onEdit(recordValue);
+            }}
+        >
+            <label htmlFor='editRecord'>Edit Nature Event</label>
             <input
                 autoFocus
                 ref={inputRef}
-                id='addRecord'
-                typr='text'
-                placeholder='Add Record'
+                id='editRecord'
+                type='text'
+                placeholder='Edit Record'
                 required
-                value={newRecord}
-                onChange={(e) => setNewRecord(e.target.value)}
+                value={recordValue}
+                onChange={(e) => setRecordValue(e.target.value)}
             />
             <button
                 type='submit'
-                aria-label='Add Record'
-                onClick={() => inputRef.current.focus()}
+                aria-label='Edit Record'
             >
+                <CgAdd />
             </button>
 
         </form>
